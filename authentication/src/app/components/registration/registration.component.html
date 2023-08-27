@@ -1,0 +1,72 @@
+<div class="registration-form bg-gray-900 text-white p-6 rounded shadow-md">
+  <h2 class="text-2xl mb-4">Register</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="registerUser()">
+    <div class="mb-4">
+      <label for="username" class="block mb-1">Username:</label>
+      <input
+        type="text"
+        id="username"
+        formControlName="username"
+        class="w-full py-2 px-3 bg-gray-800 rounded"
+        placeholder="Enter your username"
+      />
+      <p
+        *ngIf="
+          registrationForm.get('username')?.hasError('required') &&
+          registrationForm.get('username')?.touched
+        "
+        class="text-red-500 mt-1"
+      > Username length must be grater than 3 </p>
+
+    </div>
+
+    <div class="mb-4">
+      <label for="email" class="block mb-1">Email:</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        class="w-full py-2 px-3 bg-gray-800 rounded"
+        placeholder="Enter your email"
+      />
+      <p
+        *ngIf="
+          registrationForm.get('email')?.hasError('required') &&
+          registrationForm.get('email')?.touched
+        "
+        class="text-red-500 mt-1"
+      >
+        Email is required
+      </p>
+    </div>
+
+    <div class="mb-4">
+      <label for="password" class="block mb-1">Password:</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        class="w-full py-2 px-3 bg-gray-800 rounded"
+        placeholder="Enter your password"
+      />
+      <p
+        *ngIf="
+          registrationForm.get('password')?.hasError('required') &&
+          registrationForm.get('password')?.touched
+        "
+        class="text-red-500 mt-1"
+      >
+        Password length must be grater than 6
+      </p>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="registrationForm.invalid"
+      [ngClass]="{ 'opacity-50 cursor-not-allowed': registrationForm.invalid }"
+      class="w-full py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-700"
+    >
+      Register
+    </button>
+  </form>
+</div>

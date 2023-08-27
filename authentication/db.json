@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "dom",
+      "password": "dom123",
+      "email": "dom@gmail.com"
+    },
+    {
+      "username": "hrithik",
+      "email": "hritik8008@gmail.com",
+      "password": "hrithik123",
+      "id": 2
+    },
+    {
+      "username": "anonymous",
+      "email": "anonymous@gmail.com",
+      "password": "anonymous",
+      "id": 3
+    },
+    {
+      "username": "dfsdf",
+      "email": "abc@gmail.com",
+      "password": "123123",
+      "id": 4
+    },
+    {
+      "username": "Nitesh",
+      "email": "nitesh@gmail.com",
+      "password": "nitesh@gmail.com",
+      "id": 5
+    }
+  ]
+}

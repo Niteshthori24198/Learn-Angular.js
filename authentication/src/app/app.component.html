@@ -1,0 +1,15 @@
+<div class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+  <div class="max-w-md w-full px-6 py-12">
+    <h1 class="text-3xl mb-4">Welcome to Our Website</h1>
+    <p class="mb-8">Please select an option:</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a routerLink="/register"  class="block bg-gray-800 text-white py-4 px-6 rounded text-center transition duration-300 hover:bg-gray-700">
+        Register
+      </a>
+      <a routerLink="/login" class="block bg-gray-800 text-white py-4 px-6 rounded text-center transition duration-300 hover:bg-gray-700">
+        Login
+      </a>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

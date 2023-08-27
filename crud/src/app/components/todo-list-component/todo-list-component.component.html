@@ -1,0 +1,7 @@
+<app-todo-item-component
+  *ngFor="let todo of todos"
+  [item]="todo"
+  (onDeleteTodo)="onDeleteTodoItem($event)"
+  (onEditTodo)="onEditTodoItem($event)"
+  (onToggleReminder)="onToggle($event)"
+></app-todo-item-component>
